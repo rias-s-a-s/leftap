@@ -1,6 +1,15 @@
 "use client";
+
+import Link from "next/link";
+import BlogComponent from "./Blog/BlogComponent";
+
 const Home = () => {
-  return <div>porque putas no esta funcionando</div>;
+  return (
+    <>
+      {/* blog  */}
+      <BlogComponent />
+    </>
+  );
 };
 
 export default Home;

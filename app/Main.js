@@ -4,9 +4,10 @@ import MenuPrincipal from "./MenuPrincipal";
 
 const Main = ({ children }) => {
   return (
-    <>
-      <MenuPrincipal>{children}</MenuPrincipal>
-    </>
+    <div>
+      <MenuPrincipal />
+      {children}
+    </div>
   );
 };
 
