@@ -9,7 +9,7 @@ const MenuPrincipal = () => {
   return (
     <nav
       style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-      className="sticky z-50 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-gray-300 sm:bg-gradient-to-r sm:from-gray-200 sm:via-[#bce1ff] sm:to-gray-200"
+      className="sticky z-50 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-[#182d57] sm:bg-[#182d57] sm:from-[#182d57] sm:via-[#182d57] sm:to-[#182d57]"
     >
       <div className="flex justify-between items-center  ">
         {/* Escudo Logo "inicio" */}
@@ -20,7 +20,7 @@ const MenuPrincipal = () => {
           >
             <Image
               title="Ir a inicio"
-              src="/feria_logo.png"
+              src="/Logo.png"
               width={200}
               height={100}
               alt="Logotype"
@@ -48,24 +48,24 @@ const MenuPrincipal = () => {
       </div>
       <div className="">
         <div
-          className={` text-center  flex flex-col h-screen md:h-auto  md:flex md:flex-row  md:items-center z-[-1] md:z-auto md:static gap-2 absolute text-white md:text-blue-900  font-semibold bg-blue-700 md:bg-transparent w-full left-0 top-full md:w-auto md:py-0  md:pl-0 pl-7 md:opacity-100 opacity-0 right-[-400px] transition-all ease-in  ${
+          className={` text-center  flex flex-col h-screen md:h-auto  md:flex md:flex-row  md:items-center z-[-1] md:z-auto md:static gap-2 absolute text-white font-semibold bg-blue-700 md:bg-transparent w-full left-0 top-full md:w-auto md:py-0  md:pl-0 pl-7 md:opacity-100 opacity-0 right-[-400px] transition-all ease-in  ${
             isOpen ? ` right-0 py-11 opacity-100` : `hidden`
           }`}
         >
-          <ItemMenu ruta="/Proyectos" setIsOpen={setIsOpen}>
-            Proyectos
+          <ItemMenu ruta="/" setIsOpen={setIsOpen}>
+            Inicio
           </ItemMenu>
-          <ItemMenu ruta="/Noticias" setIsOpen={setIsOpen}>
-            Noticias
+          <ItemMenu ruta="/Nosotros" setIsOpen={setIsOpen}>
+            Nosotros
           </ItemMenu>
-          <ItemMenu ruta="/Inmobiliarias" setIsOpen={setIsOpen}>
-            Inmobiliarias
+          <ItemMenu ruta="/Blog" setIsOpen={setIsOpen}>
+            Blog
           </ItemMenu>
-          <ItemMenu ruta="/Corredores" setIsOpen={setIsOpen}>
-            Corredores
+          <ItemMenu ruta="/Herramientas" setIsOpen={setIsOpen}>
+            Herramientas
           </ItemMenu>
           <ItemMenu ruta="/Contactanos" setIsOpen={setIsOpen}>
-            Contáctenos
+            Desarrollo Personal
           </ItemMenu>
         </div>
       </div>

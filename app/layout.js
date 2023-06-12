@@ -1,3 +1,4 @@
+import { tawkToScript } from "@/tawk";
 import Main from "./Main";
 import "./globals.css";
 
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <script dangerouslySetInnerHTML={{ __html: tawkToScript }} />
+
       <Main>{children}</Main>
     </html>
   );
