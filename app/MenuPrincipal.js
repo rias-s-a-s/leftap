@@ -55,6 +55,9 @@ const MenuPrincipal = () => {
           <ItemMenu ruta="/" setIsOpen={setIsOpen}>
             Inicio
           </ItemMenu>
+          <ItemMenu ruta="/Servicios" setIsOpen={setIsOpen}>
+            Servicios
+          </ItemMenu>
           <ItemMenu ruta="/Nosotros" setIsOpen={setIsOpen}>
             Nosotros
           </ItemMenu>
