@@ -10,6 +10,7 @@ const Blog = () => {
           className="rounded-lg w-full"
           src="https://images.unsplash.com/photo-1603349206295-dde20617cb6a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80
     "
+          alt="image 1"
         />
         {/*Tag*/}
         <p className="text-indigo-500 font-semibold text-base mt-2">Science</p>
@@ -50,6 +51,7 @@ const Blog = () => {
           className="rounded-lg w-full"
           src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
     "
+          alt="image 3"
         />
         {/*Tag*/}
         <p className="text-indigo-500 font-semibold text-base mt-2">
@@ -91,6 +93,7 @@ const Blog = () => {
         <img
           className="h-80 rounded-lg w-full object-cover object-center"
           src="https://images.unsplash.com/photo-1580867532901-7e3707f178ce?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=732&q=80"
+          alt="image 5"
         />
         {/*Tag*/}
         <p className="text-indigo-500 font-semibold text-base mt-2">Culture</p>
