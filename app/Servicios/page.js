@@ -6,87 +6,95 @@ const Servicios = () => {
       <div className>
         <div className="text-center font-semibold">
           <h1 className="text-5xl">
-            <span className="text-blue-700 tracking-wide">Flexible </span>
-            <span>Plans</span>
+            <span className="text-blue-700 tracking-wide">Nuestros </span>
+            <span>Servicios</span>
           </h1>
-          <p className="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
-            Choose a plan that works best for you and
-            <br /> your team.
+          <p className="p-2">
+            <span className="text-lg font-semibold">No hay mejor inversión que la que uno hace por uno mismo.<br />
+              El educarte te hace crecer y expandir tu conocimiento y por ende tus  ingresos</span>
           </p>
         </div>
         <div className="pt-24 flex flex-row">
           {/* Basic Card */}
           <div className="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
-            <h1 className="text-black font-semibold text-2xl">Basic</h1>
+            <h1 className="text-black font-semibold text-2xl">Emprendedoor X</h1>
             <p className="pt-2 tracking-wide">
               <span className="text-gray-400 align-top">$ </span>
-              <span className="text-3xl font-semibold">10</span>
-              <span className="text-gray-400 font-medium">/ user</span>
+              <span className="text-3xl font-semibold">13.20</span>
             </p>
             <hr className="mt-4 border-1" />
             <div className="pt-8">
-              <p className="font-semibold text-gray-400 text-left">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  Get started with <span className="text-black">messaging</span>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Más de 20 cursos digitales en una sola plataforma
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  Flexible <span className="text-black">team meetings</span>
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Suscribiéndote anualmente, tendrás la flexibilidad de aprender a tu propio ritmo
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  <span className="text-black">5 TB</span> cloud storage
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Todos los cursos gratis con una mínima suscripción
                 </span>
-              </p>
-              <a href="#" className>
+              </div>
+              <a href="https://hotmart.com/es/marketplace/productos/suscripcion-emprendedoorx/N72655897L?ref=X75779763C" rel="noreferrer" target="_blank">
                 <p className="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                  <span className="font-medium">Choose Plan</span>
-                  <span className="pl-2 material-icons align-middle text-sm">
-                    east
-                  </span>
+                  <span className="font-bold">Comprar</span>
                 </p>
               </a>
             </div>
           </div>
           {/* StartUp Card */}
-          <div className="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
-            <h1 className="text-white font-semibold text-2xl">Startup</h1>
-            <p className="pt-2 tracking-wide">
-              <span className="text-gray-400 align-top">$ </span>
-              <span className="text-3xl font-semibold">24</span>
-              <span className="text-gray-400 font-medium">/ user</span>
-            </p>
+          <div className="w-80 p-8 bg-[#182d57] text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+            <h1 className="text-white font-semibold text-2xl">Capacitaciones y Formación profesional</h1>
             <hr className="mt-4 border-1 border-gray-600" />
             <div className="pt-8">
-              <p className="font-semibold text-gray-400 text-left">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  All features in <span className="text-white">Basic</span>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle text-sm font-thin text-white">
+                  Todos los cursos gratis con una mínima suscripción
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  Flexible <span className="text-white">call scheduling</span>
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle text-sm font-thin text-white">
+                  Herramientas que puedes utilizar para hacer crecer tu negocio
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  <span className="text-white">15 TB</span> cloud storage
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle text-sm font-thin text-white">
+                  Curso de desarrollo personal y formación profesional
                 </span>
-              </p>
-              <a href="#" className>
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle text-sm font-thin text-white">
+                  Tendrás la oportunidad de estudiar y crear tu proio emprendimiento
+                </span>
+              </div>
+              <a href="https://leftap.org/capacitaciones/" rel="noreferrer" target="_blank">
                 <p className="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                  <span className="font-medium">Choose Plan</span>
-                  <span className="pl-2 material-icons align-middle text-sm">
-                    east
-                  </span>
+                  <span className="font-bold">Ver Información</span>
                 </p>
               </a>
             </div>
@@ -98,38 +106,36 @@ const Servicios = () => {
           </div>
           {/* Enterprise Card */}
           <div className="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
-            <h1 className="text-black font-semibold text-2xl">Enterprise</h1>
-            <p className="pt-2 tracking-wide">
-              <span className="text-gray-400 align-top">$ </span>
-              <span className="text-3xl font-semibold">35</span>
-              <span className="text-gray-400 font-medium">/ user</span>
-            </p>
+            <h1 className="text-black font-semibold text-2xl">Herramientas para el emprendedor</h1>
             <hr className="mt-4 border-1" />
             <div className="pt-8">
-              <p className="font-semibold text-gray-400 text-left">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  All features in <span className="text-black">Startup</span>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Todo lo que un emprendedor necesita para su empresa
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  Growth <span className="text-black">oriented</span>
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Sotfware de sistemas operativos, administrativos y contables
                 </span>
-              </p>
-              <p className="font-semibold text-gray-400 text-left pt-5">
-                <span className="material-icons align-middle">done</span>
-                <span className="pl-2">
-                  <span className="text-black">Unlimited</span> cloud storage
+              </div>
+              <div className="text-left flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+                </svg>
+                <span className="align-middle font-thin text-gray-800">
+                  Programas y libros para el crecimiento de tu empresa
                 </span>
-              </p>
-              <a href="#" className>
+              </div>
+              <a href="https://leftap.org/herramientas-para-el-emprendedor/" target="_blank" rel="noreferrer">
                 <p className="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                  <span className="font-medium">Choose Plan</span>
-                  <span className="pl-2 material-icons align-middle text-sm">
-                    east
-                  </span>
+                  <span className="font-bold">Ver Información</span>
                 </p>
               </a>
             </div>

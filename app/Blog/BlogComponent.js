@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 
 const BlogComponent = () => {
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(!open)
   return (
     <main className="flex-grow">
       <div className="relative px-8">
