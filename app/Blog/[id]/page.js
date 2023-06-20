@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blog = () => {
+const Blog = ({ data }) => {
   return (
     <div>
       <main className="flex-grow">
