@@ -4,6 +4,7 @@ import BlogComponent from "./Blog/BlogComponent";
 import Footer from "./Footer";
 import Comentarios from "./Comentarios";
 import { Button, Carousel, Typography } from "@material-tailwind/react";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -11,7 +12,12 @@ const Home = () => {
       {/* slider */}
       <Carousel className="rounded-xl h-2/5">
         <div>
-          <img src="/PortadaLEFTAP.png" />
+          <Image
+            src={"/PortadaLEAFTAP.png"}
+            width={"auto"}
+            height={"auto"}
+          />
+          {/* <img src="/PortadaLEFTAP.png" /> */}
           <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
             <div className="w-3/4 text-center md:w-2/4">
               <Typography
@@ -30,7 +36,7 @@ const Home = () => {
               </Typography>
               <div className="flex justify-center gap-2">
                 <Button size="lg" color="white">
-                  Conocenos
+                  <a href="/Nosotros">Conocenos</a>
                 </Button>
               </div>
             </div>
