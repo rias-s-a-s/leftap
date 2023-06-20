@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 
 const BlogComponent = () => {
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(!open)
   return (
     <main className="flex-grow">
       <div className="relative px-8">
@@ -15,7 +13,7 @@ const BlogComponent = () => {
           </h1>
         </div>
       </div>
-      <div className="container mx-auto grid grid-cols-3 p-4 gap-2 bg-[#182d57] rounded-md">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 p-4 gap-2 bg-[#182d57] rounded-md">
         <div>
           <Card className="mt-6 w-96 h-[92%] mx-auto">
             <CardHeader color="blue-gray" className="h-56">
