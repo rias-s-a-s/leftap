@@ -63,10 +63,7 @@ const MenuPrincipal = () => {
           <ItemMenu ruta="/Blog" setIsOpen={setIsOpen}>
             Blog
           </ItemMenu>
-          <ItemMenu ruta="/Herramientas" setIsOpen={setIsOpen}>
-            Herramientas
-          </ItemMenu>
-          <ItemMenu ruta="/Contactanos" setIsOpen={setIsOpen}>
+          <ItemMenu ruta="/Desarrollo" setIsOpen={setIsOpen}>
             Desarrollo Personal
           </ItemMenu>
         </div>

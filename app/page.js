@@ -1,7 +1,5 @@
 "use client";
 import BlogComponent from "./Blog/BlogComponent";
-
-import Footer from "./Footer";
 import Comentarios from "./Comentarios";
 import { Button, Carousel, Typography } from "@material-tailwind/react";
 import Image from "next/image";
@@ -47,7 +45,7 @@ const Home = () => {
       <BlogComponent />
 
       <Comentarios />
-      <Footer />
+
     </>
   );
 };

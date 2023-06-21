@@ -1,6 +1,7 @@
 "use client";
 import { tawkToScript } from "@/tawk";
 import MenuPrincipal from "./MenuPrincipal";
+import Footer from "./Footer";
 
 const Main = ({ children }) => {
   return (
@@ -31,6 +32,7 @@ const Main = ({ children }) => {
 
       <MenuPrincipal />
       {children}
+      <Footer />
     </div>
   );
 };
