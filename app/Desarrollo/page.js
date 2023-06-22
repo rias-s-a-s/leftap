@@ -1,8 +1,10 @@
 "use client"
 import Image from 'next/image';
-import React from 'react'
+import React, { useState } from 'react'
+import Planes from './Planes';
 
 function Desarrollo() {
+    const [planes, setPlanes] = useState(false)
     return (
         <>
             {/* FIRST SECTION */}
@@ -175,6 +177,45 @@ function Desarrollo() {
                     </div>
                 </div>
             </div>
+            {/* FOUR SECTION */}
+            <div className='container mx-auto bg-[#182d57] p-4 rounded-md mt-5'>
+                <p className='tracking-[7px] text-white font-[oswald] p-2 text-sm font-bold italic'>TRANSFORMANDO VIDAS</p>
+                <hr className='h-1 bg-[#ff4c00] w-1/12' />
+                <p className='p-4 text-4xl text-white font-bold font-[oswal] italic tracking-[7px]'>TESTIMONIALES</p>
+                <div className='grid md:grid-cols-3 gap-x-7'>
+                    <div className='flex flex-col justify-items-center'>
+                        <p className='px-2 text-xl text-white font-[oswal] font-bold'>Martin Robert</p>
+                        <hr className='h-1 bg-[#ff4c00] w-4/12' />
+                        <p className='p-2 text-base text-white leading-relaxed text-justify'>Muchisimas gracias, gracias a su apoyo y acompañamiento pude concretar mis proyectos. Con uds aprendí a valorarme y creer en mí. Cree mi propio negocio y hoy en día es mi fuente de ingresos. Con su acompañamiento aprendo y crezco todos los días, aun cuando el programa ya acabo.<br /><br />Muchas gracias Mir, una excelente mentora y amiga.</p>
+                    </div>
+                    <div className='flex flex-col justify-items-center'>
+                        <p className='px-2 text-xl text-white font-[oswal] font-bold'>Kimberly Duran</p>
+                        <hr className='h-1 bg-[#ff4c00] w-5/12' />
+                        <p className='p-2 text-base text-white text-justify font-bold'>Increible este programa!</p>
+                        <p className='p-2 text-base text-white leading-relaxed text-justify'>La verdad no lo creía hasta que comencé a aplicarlo en mi vida, fue un antes y despúes. El acompañamiento es constante, cuando sentís que estas por abandonar, ahí están para sostenerte y que sigas adelante.</p>
+                        <p className='p-2 text-base text-white leading-relaxed text-justify'>Con este programa no tan solo encontrás una mentora sino también una amiga. Muchas gracias</p>
+                    </div>
+                    <div className='flex flex-col justify-items-center'>
+                        <p className='p-2 text-xl text-white font-[oswal] font-bold'>Alondra Meza</p>
+                        <p className='p-2 text-base text-white leading-relaxed text-justify'>Gran trabajo hicieste conmigo Mir! Gracias por hacerme confiar en mí. Recuperé la seguridad en mí y pude concretar mis metas, ahora me siento con más fuerza para afrontar las nuevas. </p>
+                        <p className='p-2 text-base text-white leading-relaxed text-justify'>Lo mejor que encontré una amiga, ya que tengo tu apoyo cuando lo necesito. Gracias por todo eternamente.</p>
+                    </div>
+                </div>
+                <div className='p-2 text-center'>
+                    <button className='p-4 w-auto bg-[#ff4c00] text-white font-bold italic rounded-3xl' onClick={(e) => {
+                        e.preventDefault
+                        setPlanes(!planes)
+                    }}>
+                        <span className='flex text-xl gap-x-2'>
+                            Tu Plan Perfecto
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            {planes && <Planes set={setPlanes} plan={planes} />}
         </>
     )
 }
