@@ -3,7 +3,7 @@ import React from "react";
 const Comentarios = () => {
   return (
     <>
-      <div className="">
+      <div className="mt-2">
         <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
           <h2 className="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">
             Testimonios
