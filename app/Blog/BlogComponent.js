@@ -9,7 +9,7 @@ const BlogComponent = () => {
       <div className="relative px-8">
         <div className="max-w-screen-xl mx-auto my-12 md:mt-18 lg:mt-20 text-center">
           <h1 className="font-display text-secondary-500 text-4xl font-black tracking-wide">
-            Un poco de nosotros
+            {/* Un poco de nosotros */}
           </h1>
         </div>
       </div>
@@ -17,7 +17,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full h-[92%] mx-auto">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="https://leftap.org/wp-content/uploads/2022/11/20221124_181314_0000.png" alt="img-blur-shadow" layout="fill" />
+              <img src="/emprendedor.jpg" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -35,7 +35,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full mx-auto h-[92%]">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="https://leftap.org/wp-content/uploads/2022/07/pexels-yan-krukov-8199166-scaled-e1674319724695-874x551.jpg" alt="img-blur-shadow" layout="fill" />
+              <img src="/joventud.jpg" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -53,7 +53,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full mx-auto h-[92%]">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="https://leftap.org/wp-content/uploads/2021/05/0e0acc_c2550764127246f8ba1f77e2900d19damv2-e1674319682725.webp" alt="img-blur-shadow" layout="fill" />
+              <img src="/habilidad.jpg" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -71,7 +71,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full mx-auto h-[92%]">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="https://leftap.org/wp-content/uploads/2022/08/Diseno-sin-titulo-e1674319529312-874x551.png" alt="img-blur-shadow" layout="fill" />
+              <img src="mejoraVida.jpg" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
