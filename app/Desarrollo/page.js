@@ -8,7 +8,7 @@ function Desarrollo() {
     return (
         <>
             {/* FIRST SECTION */}
-            <div className='h-auto p-10 bg-[url("https://leftap.org/wp-content/uploads/2022/05/fashion-01.jpg")] bg-cover'>
+            <div className='h-auto p-10 bg-[url("/reeduca.webp")] bg-cover'>
                 <div className='container border-gray-300 border-2 mx-auto rounded-tl-[45vh] rounded-br-[45vh] p-4 shadow-lg'>
                     <div className='grid grid-cols-3'>
                         <div className='text-2xl col-span-2 rounded-tl-[40vh] text-center'>

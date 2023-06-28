@@ -1,7 +1,5 @@
 "use client"
-import { Button, Card, CardBody, CardFooter, CardHeader, Dialog, DialogBody, DialogFooter, DialogHeader, Typography } from "@material-tailwind/react";
-import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
 
 const BlogComponent = () => {
   return (
@@ -17,7 +15,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full h-[92%] mx-auto">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="/emprendedor.jpg" alt="img-blur-shadow" layout="fill" />
+              <img src="/emprendedor.webp" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -35,7 +33,7 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full mx-auto h-[92%]">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="/joventud.jpg" alt="img-blur-shadow" layout="fill" />
+              <img src="/joventud.webp" alt="img-blur-shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">

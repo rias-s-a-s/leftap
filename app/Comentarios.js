@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Comentarios = () => {
@@ -5,138 +6,86 @@ const Comentarios = () => {
     <>
       <div className="mt-2">
         <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-          <h2 className="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">
+          <h2 className="mb-2 uppercase drop-shadow-lg text-center text-2xl text-gray-900 italic font-serif font-bold md:text-5xl">
             Estas instituciones ya están cultivando el futuro.
           </h2>
-          <div class="h-screen flex bg-gray-900 items-center justify-center">
-            <div class="grid grid-cols-12 gap-2 gap-y-4 max-w-6xl">
-
+          <div class="h-full p-8 flex bg-[#182d57] items-center justify-center rounded-lg">
+            <div class="grid grid-cols-12 gap-4 gap-y-4 max-w-6xl">
               {/* <!-- Video 1 --> */}
-              <div class="col-span-12 sm:col-span-6 md:col-span-3">
+              <div class="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 rounded-xl filter hover:shadow-lg hover:shadow-white cursor-pointer">
                 <card class="w-full flex flex-col">
-                  <div class="relative">
-
+                  <div class="relative self-center">
                     {/* <!-- Image Video --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/59/300/200" class="w-96 h-auto" />
-                    </a>
-
-                    <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                    <Image
+                      src={"/Colegios/SanMartin.webp"}
+                      height={250}
+                      width={200}
+                    />
                   </div>
-
                   <div class="flex flex-row mt-2 gap-2">
-
-                    {/* <!-- Profile Picture --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/1/40/40" class="rounded-full max-h-10 max-w-10" />
-                    </a>
-
                     {/* <!-- Description --> */}
-                    <div clas="flex flex-col">
-                      <a href="#">
-                        <p class="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
-                      </a>
-                      <a class="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
-                      <p class="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
+                    <div className="flex flex-col text-center w-full">
+                      <p class="text-gray-100 text-sm font-semibold">Instituto General San Martín</p>
                     </div>
 
                   </div>
                 </card>
               </div>
-
               {/* <!-- Video 2 --> */}
-              <div class="col-span-12 sm:col-span-6 md:col-span-3">
+              <div class="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
                 <card class="w-full flex flex-col">
-                  <div class="relative">
-
+                  <div class="relative self-center">
                     {/* <!-- Image Video --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/60/300/200" class="w-96 h-auto" />
-                    </a>
-
-                    <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                    <Image
+                      src={"/Colegios/Tucuman.webp"}
+                      height={250}
+                      width={200}
+                    />
                   </div>
-
                   <div class="flex flex-row mt-2 gap-2">
-
-                    {/* <!-- Profile Picture --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/4/40/40" class="rounded-full max-h-10 max-w-10" />
-                    </a>
-
                     {/* <!-- Description --> */}
-                    <div clas="flex flex-col">
-                      <a href="#">
-                        <p class="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
-                      </a>
-                      <a class="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
-                      <p class="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
+                    <div className="flex flex-col text-center w-full">
+                      <p class="text-gray-100 text-sm font-semibold">Instituto Congreso Tucumán</p>
                     </div>
 
                   </div>
                 </card>
               </div>
-
               {/* <!-- Video 3 --> */}
-              <div class="col-span-12 sm:col-span-6 md:col-span-3">
+              <div class="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
                 <card class="w-full flex flex-col">
-                  <div class="relative">
-
+                  <div class="relative self-center">
                     {/* <!-- Image Video --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/22/300/200" class="w-96 h-auto" />
-                    </a>
-
-                    <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                    <Image
+                      src={"/Colegios/JovenArgentino.webp"}
+                      height={250}
+                      width={200}
+                    />
                   </div>
-
                   <div class="flex flex-row mt-2 gap-2">
-
-                    {/* <!-- Profile Picture --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/88/40/40" class="rounded-full max-h-10 max-w-10" />
-                    </a>
-
                     {/* <!-- Description --> */}
-                    <div clas="flex flex-col">
-                      <a href="#">
-                        <p class="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
-                      </a>
-                      <a class="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
-                      <p class="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
+                    <div className="flex flex-col text-center w-full">
+                      <p class="text-gray-100 text-sm font-semibold">Instituto Privado Joven Argentino</p>
                     </div>
 
                   </div>
                 </card>
               </div>
-
               {/* <!-- Video 4 --> */}
-              <div class="col-span-12 sm:col-span-6 md:col-span-3">
+              <div class="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
                 <card class="w-full flex flex-col">
-                  <div class="relative">
-
+                  <div class="relative self-center">
                     {/* <!-- Image Video --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/90/300/200" class="w-96 h-auto" />
-                    </a>
-
-                    <p class="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
+                    <Image
+                      src={"/Colegios/Apemys.webp"}
+                      height={250}
+                      width={200}
+                    />
                   </div>
-
                   <div class="flex flex-row mt-2 gap-2">
-
-                    {/* <!-- Profile Picture --> */}
-                    <a href="#">
-                      <img src="https://picsum.photos/seed/57/40/40" class="rounded-full max-h-10 max-w-10" />
-                    </a>
-
                     {/* <!-- Description --> */}
-                    <div clas="flex flex-col">
-                      <a href="#">
-                        <p class="text-gray-100 text-sm font-semibold">Learn CSS Box Model in 8 Minutes</p>
-                      </a>
-                      <a class="text-gray-400 text-xs mt-2 hover:text-gray-100" href="#"> Web Dev Simplified </a>
-                      <p class="text-gray-400 text-xs mt-1">241K views . 3 years ago</p>
+                    <div className="flex flex-col text-center w-full">
+                      <p class="text-gray-100 text-sm font-semibold">Instituto Apemys</p>
                     </div>
 
                   </div>
