@@ -50,7 +50,7 @@ const Nosotros = () => {
         <div className="flex justify-center mx-auto">
           <Image
             className="rounded-xl border-2 border-white"
-            src={"https://leftap.org/wp-content/uploads/2022/05/mirta-lopez.webp"}
+            src={"/Marina2.jpg"}
             width={150}
             height={150}
           />
