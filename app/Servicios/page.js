@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Servicios = () => {
@@ -92,11 +93,14 @@ const Servicios = () => {
                   Tendrás la oportunidad de estudiar y crear tu proio emprendimiento
                 </span>
               </div>
-              <a href="https://leftap.org/capacitaciones/" rel="noreferrer" target="_blank">
+              <Link
+                href={"/Capacitaciones"}
+
+              >
                 <p className="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
                   <span className="font-bold">Ver Información</span>
                 </p>
-              </a>
+              </Link>
             </div>
             <div className="absolute top-4 right-4">
               <p className="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">
@@ -133,11 +137,12 @@ const Servicios = () => {
                   Programas y libros para el crecimiento de tu empresa
                 </span>
               </div>
-              <a href="https://leftap.org/herramientas-para-el-emprendedor/" target="_blank" rel="noreferrer">
+              <Link href={"/Herramientas"}>
                 <p className="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
                   <span className="font-bold">Ver Información</span>
                 </p>
-              </a>
+              </Link>
+
             </div>
           </div>
         </div>

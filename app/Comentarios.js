@@ -85,7 +85,7 @@ const Comentarios = () => {
                   <div class="flex flex-row mt-2 gap-2">
                     {/* <!-- Description --> */}
                     <div className="flex flex-col text-center w-full">
-                      <p class="text-gray-100 text-sm font-semibold">Instituto Apemys</p>
+                      <p class="text-gray-100 text-sm font-semibold">Agremiación del Personal de Enseñanza Media y Superior</p>
                     </div>
 
                   </div>
