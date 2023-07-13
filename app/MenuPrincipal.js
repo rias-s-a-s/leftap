@@ -9,7 +9,7 @@ const MenuPrincipal = () => {
   return (
     <nav
       style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-      className="sticky z-50 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-[#182d57] sm:bg-[#182d57] sm:from-[#182d57] sm:via-[#182d57] sm:to-[#182d57]"
+      className="sticky z-20 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-[#182d57] sm:bg-[#182d57] sm:from-[#182d57] sm:via-[#182d57] sm:to-[#182d57]"
     >
       <div className="flex justify-between items-center  ">
         {/* Escudo Logo "inicio" */}
@@ -20,7 +20,7 @@ const MenuPrincipal = () => {
           >
             <Image
               title="Ir a inicio"
-              src="/Logo.png"
+              src="/Logos/Logo.png"
               width={200}
               height={100}
               alt="Logotype"

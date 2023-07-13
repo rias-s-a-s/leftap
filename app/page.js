@@ -10,12 +10,12 @@ const Home = () => {
       {/* slider */}
       <Carousel className="rounded-xl h-4/6 lg:h-2/5">
         <div>
-          {/* <Image
+          <Image
             src={"/PortadaLEFTAP.png"}
             width={1350}
             height={1350}
-          /> */}
-          <img src="/PortadaLEFTAP.png" />
+          />
+          {/* <img src="/PortadaLEFTAP.webp" /> */}
           <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
             <div className="w-3/4 text-center md:w-2/4">
               <Typography
