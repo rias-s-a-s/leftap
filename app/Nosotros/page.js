@@ -47,17 +47,20 @@ const Nosotros = () => {
       </div>
       <div className="w-full text-center p-4 bg-[#182d57] mt-2 rounded-md">
         <div className="text-4xl font-bold text-white">Mi Histora, Mi Pasado y Mi Presente</div>
-        <div className="flex justify-center mx-auto">
-          <Image
-            className="rounded-xl border-2 border-white"
-            src={"/Marina2.jpg"}
-            width={150}
-            height={150}
-          />
-        </div>
-        <div className="p-4 font-[cursive] text-white text-xl">
-          <p className="p-2">Hola, mi nombre es Mirta López, emprendedora, profesora de Economía y coach integral en PNL (Programación Neuro Lingüística).</p>
-          <p className="p-2">He creado este espacio para brindar apoyo y acompañamiento a cualquier persona y emprendedor que desee crecer personal y financieramente con ayuda de la educación financiera.</p>
+        <div className="grid md:grid-cols-3 mb-4">
+          <div className="mx-auto">
+            <Image
+              className="rounded-xl border-2 border-white"
+              src={"/Marina2.jpg"}
+              width={150}
+              height={150}
+            />
+
+          </div>
+          <div className="p-4 font-[cursive] text-white text-xl col-span-2 text-left">
+            <p className="p-2">Hola, mi nombre es Mirta López, emprendedora, profesora de Economía y coach integral en PNL (Programación Neuro Lingüística).</p>
+            <p className="p-2">He creado este espacio para brindar apoyo y acompañamiento a cualquier persona y emprendedor que desee crecer personal y financieramente con ayuda de la educación financiera.</p>
+          </div>
         </div>
         <div className="flex justify-center">
           <ButtonGroup>
