@@ -10,9 +10,9 @@ const Comentarios = () => {
             Estas instituciones ya están cultivando el futuro.
           </h2>
           <div className="h-full p-8 flex bg-[#182d57] items-center justify-center rounded-lg">
-            <div className="grid grid-cols-12 gap-4 gap-y-4 max-w-6xl">
+            <div className="grid grid-cols-12 gap-8 gap-y-4 max-w-6xl justify-items-center">
               {/* <!-- Video 1 --> */}
-              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 rounded-xl filter hover:shadow-lg hover:shadow-white cursor-pointer">
+              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 rounded-xl filter hover:shadow-lg hover:shadow-white cursor-pointer hover:-translate-x-3 w-2/4 md:w-full">
                 <card className="w-full flex flex-col">
                   <div className="relative self-center">
                     {/* <!-- Image Video --> */}
@@ -32,7 +32,7 @@ const Comentarios = () => {
                 </card>
               </div>
               {/* <!-- Video 2 --> */}
-              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
+              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer hover:translate-x-3 md:hover:translate-y-3 w-2/4 md:w-full">
                 <card className="w-full flex flex-col">
                   <div className="relative self-center">
                     {/* <!-- Image Video --> */}
@@ -52,7 +52,7 @@ const Comentarios = () => {
                 </card>
               </div>
               {/* <!-- Video 3 --> */}
-              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
+              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer hover:-translate-x-3 md:hover:-translate-y-3 w-2/4 md:w-full">
                 <card className="w-full flex flex-col">
                   <div className="relative self-center">
                     {/* <!-- Image Video --> */}
@@ -72,7 +72,7 @@ const Comentarios = () => {
                 </card>
               </div>
               {/* <!-- Video 4 --> */}
-              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer">
+              <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 p-2 rounded-xl hover:shadow-lg hover:shadow-white cursor-pointer hover:translate-x-3 w-2/4 md:w-full">
                 <card className="w-full flex flex-col">
                   <div className="relative self-center">
                     {/* <!-- Image Video --> */}
