@@ -4,13 +4,13 @@ import React from "react";
 const Comentarios = () => {
   return (
     <>
-      <div className="mt-2">
+      <div className="mt-2 pb-[2%]">
         <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
           <h2 className="mb-2 uppercase drop-shadow-lg text-center text-2xl text-gray-900 italic font-serif font-bold md:text-5xl">
             Estas instituciones ya están cultivando el futuro.
           </h2>
           <div className="h-full p-8 flex bg-[#182d57] items-center justify-center rounded-lg">
-            <div className="grid grid-cols-12 gap-8 gap-y-4 max-w-6xl justify-items-center">
+            <div className="grid lg:grid-cols-12 gap-[1.7rem] lg:gap-8 gap-y-4 lg:max-w-6xl justify-items-center">
               {/* <!-- Video 1 --> */}
               <div className="col-span-12 sm:col-span-6 md:col-span-3 bg-blue-900 rounded-xl filter hover:shadow-lg hover:shadow-white cursor-pointer hover:-translate-x-3 w-2/4 md:w-full">
                 <card className="w-full flex flex-col">
