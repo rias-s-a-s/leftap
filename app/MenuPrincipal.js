@@ -1,11 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ItemMenu from "./ItemMenu";
 import Link from "next/link";
+import { usePathname } from "next/navigation"
 
 const MenuPrincipal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pagina = usePathname()
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pagina])
   return (
     <nav
       style={{ filter: "drop-shadow(0px 0px 3px black)" }}
@@ -20,9 +25,9 @@ const MenuPrincipal = () => {
           >
             <Image
               title="Ir a inicio"
-              src="/Logos/Logo.png"
-              width={200}
-              height={100}
+              src="/Logos/Logo.webp"
+              width={120}
+              height={50}
               alt="Logotype"
               className="object-contain"
             />
