@@ -9,12 +9,13 @@ const MenuPrincipal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pagina = usePathname()
   useEffect(() => {
+    // console.log(pagina)
     setIsOpen(false)
   }, [pagina])
   return (
     <nav
       style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-      className="sticky z-20 top-0 p-2 shadow-sm md:flex md:items-center md:justify-around bg-gray-200 sm:bg-gray-200 sm:from-gray-200 sm:via-gray-200 sm:to-gray-200 text-[#182d57]"
+      className={`${pagina == "/Admin" && "hidden" || "sticky md:flex"} z-20 top-0 p-2 shadow-sm md:items-center md:justify-around bg-gray-200 sm:bg-gray-200 sm:from-gray-200 sm:via-gray-200 sm:to-gray-200 text-[#182d57]`}
     >
       <div className="flex justify-between items-center  ">
         {/* Escudo Logo "inicio" */}

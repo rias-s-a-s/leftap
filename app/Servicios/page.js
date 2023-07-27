@@ -287,7 +287,7 @@ const Servicios = () => {
                 </span>
               </summary>
               <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                Sí, la educación financiera debe ser divulgada, puedes contactarme por el número de WhatsApp y nuestro equipo te orientará sobre más detalles y cotización.
+                Si, realizamos charlas y conferencias en establecimientos educativos e instituciones que deseen impartir una propuesta diferente, la educación financiera debe ser divulgada, puedes contactarme por el número de WhatsApp y nuestro equipo te orientará sobre más detalles y cotización.
               </p>
             </details>
           </div>

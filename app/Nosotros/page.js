@@ -35,8 +35,15 @@ const Nosotros = () => {
       <div>
         <div className='text-4xl font-bold'>Sobre Nosotros</div>
         <div className="p-4 font-[cursive]">
-          <p className="text-xl text-justify p-2">¿Quién <b>quiere</b> ser <b>millonario</b>? Esta pregunta retumba en la mente de muchas personas. ¿Cómo lo logramos y como lo mantenemos por el resto de nuestras vidas? Es lo que me llevó a investigar, estudiar, aplicar en mi vida lo aprendido y divulgar mi experiencia.</p>
-          <p className="text-xl text-justify p-2">¿Qué es la <b>Libertad Financiera</b>? Es ser el dueño del bien más preciado, el Tiempo. La libertad de tu tiempo y de tus finanzas es lo que hace la combinación perfecta de como volverte millonario.</p>
+          <p className="text-xl text-justify p-2">
+            Somos un centro de formación y consultoría para emprendedores que busca promover la educación financiera, capacitar y ayudar a las personas con sus finanzas personales, como ayudarte a la construcción de tu propia empresa.
+          </p>
+          <p className="text-xl text-justify p-2">
+            Fomentando tu crecimiento personal y profesional realizamos a través de charlas, conferencias, libros, cursos y capacitaciones buscamos promover la educación financiera y comenzar a inculcarlo en el sistema educativo.
+            Crear conciencia en los niños, jóvenes como en adultos es vital para el crecimiento financiero de una sociedad, de esta manera vamos sembrando semillas para las futuras generaciones
+          </p>
+          {/* <p className="text-xl text-justify p-2">¿Quién <b>quiere</b> ser <b>millonario</b>? Esta pregunta retumba en la mente de muchas personas. ¿Cómo lo logramos y como lo mantenemos por el resto de nuestras vidas? Es lo que me llevó a investigar, estudiar, aplicar en mi vida lo aprendido y divulgar mi experiencia.</p>
+          <p className="text-xl text-justify p-2">¿Qué es la <b>Libertad Financiera</b>? Es ser el dueño del bien más preciado, el Tiempo. La libertad de tu tiempo y de tus finanzas es lo que hace la combinación perfecta de como volverte millonario.</p> */}
         </div>
         <button className="bg-blue-500 w-3/12 font-bold text-white rounded-md mx-auto p-4 text-xl" onClick={(e) => {
           e.preventDefault();
