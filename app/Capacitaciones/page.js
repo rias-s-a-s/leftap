@@ -13,20 +13,21 @@ function Capacitaciones() {
                     <p className='py-2 text-lg'>Perfecciónate en tus áreas de conocimiento, para transfórmate en un experto y monetizar tus habilidades.</p>
                     <p className='py-2 text-lg'>Además en nuestro blog encontrarás artículos que te ayudarán a vender y conocer más a tu cliente.</p>
                 </div>
-                <div className='grid md:grid-cols-3 mt-4 p-4 bg-gradient-to-b from-[#e09900] to-[#f7e49f]'>
+                <div className='grid grid-cols-1 md:grid-cols-3 mt-4 p-4 bg-gradient-to-b from-[#e09900] to-[#f7e49f]'>
                     <div>
                         <div>
                             <Image
+                            className='m-auto md:m-0'
                                 src={"/Capacitaciones/fabrica.png"}
-                                height={200}
-                                width={200}
+                                height={250}
+                                width={250}
                             />
                         </div>
                         <div className='flex justify-end'>
                             <Image
                                 src={"/Capacitaciones/MockupFABRICA.png"}
-                                height={250}
-                                width={250}
+                                height={350}
+                                width={350}
                             />
                         </div>
                     </div>
@@ -48,10 +49,11 @@ function Capacitaciones() {
                         </div>
                     </div>
                 </div>
-                <div className=' grid md:grid-cols-3 mt-4 p-4 bg-gradient-to-tr from-orange-600 via-orange-200 to-orange-50'>
+                <div className=' grid grid-cols-1 md:grid-cols-3 mt-4 p-4 bg-gradient-to-tr from-orange-600 via-orange-200 to-orange-50'>
                     <div className='h-full'>
                         <div>
                             <Image
+                            className='m-auto md:m-0'
                                 src={"/Capacitaciones/barberia.jpg"}
                                 height={250}
                                 width={250}

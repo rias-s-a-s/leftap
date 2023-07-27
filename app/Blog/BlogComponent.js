@@ -116,13 +116,13 @@ const BlogComponent = () => {
         <div className='w-full fixed top-0 z-50 h-screen bg-black/20 text-center'>
           <div className='text-red-700 w-full mx-auto font-bold font-[oswald] text-6xl drop-shadow-lg italic tracking-[7px] mt-14 fixed justify-center z-50 flex'>
             NUESTRAS CHARLAS
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 ml-6 cursor-pointer" onClick={() => {
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 lg:ml-6 cursor-pointer" onClick={() => {
               setReel(!reel)
             }}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>
-          <div className='bg-white w-3/4 z-50 mx-auto mt-32 h-[74%] text-center p-2 rounded-md '>
+          <div className='bg-white w-3/4 z-50 mx-auto mt-[12rem] lg:mt-32 h-[40%] md:h-[47%] lg:h-[74%] text-center p-2 rounded-md '>
             <Carousel showArrows={true} autoPlay showThumbs={false} showStatus={false}>
               <div>
                 <img

@@ -7,7 +7,7 @@ const Servicios = () => {
     <div className="h-full bg-gray-300">
 
       {/* // INFORMACION SERVICIOS */}
-      <div className="min-h-screen mb-8 flex justify-center items-center">
+      <div className="min-h-screen mb-8 flex justify-center items-center pt-[1%]">
         <div className>
           <div className="text-center font-semibold">
             <h1 className="text-5xl">
@@ -19,7 +19,7 @@ const Servicios = () => {
                 El educarte te hace crecer y expandir tu conocimiento y por ende tus  ingresos</span>
             </p>
           </div>
-          <div className="pt-24 flex flex-col gap-y-4 md:flex-row items-center">
+          <div className="pt-16 flex flex-col gap-y-4 md:flex-row items-center">
             {/* Emprendedor X */}
             <div className="w-72 md:w-60 lg:w-80 xl:w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
               <h1 className="text-black font-semibold text-2xl">Emprendedoor X</h1>
@@ -114,6 +114,7 @@ const Servicios = () => {
             </div>
             {/* Herramientas para el Emprendedor */}
             <div className="w-72 md:w-60 lg:w-72 xl:w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
+            {/* <div className="w-72 md:w-60 lg:w-80 xl:w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl"> */}
               <h1 className="text-black font-semibold text-2xl">Herramientas para el emprendedor</h1>
               <hr className="mt-4 border-1" />
               <div className="pt-8">
@@ -155,9 +156,13 @@ const Servicios = () => {
       {/* // PREGUNTAS FRECUENTES */}
       <div class="w-full mx-auto p-5 mt-16 min-h-sceen">
         <div class="flex flex-col items-center">
-          <h2 class="font-bold text-5xl mt-5 tracking-tight">
+          {/* <h2 class="font-bold text-5xl mt-5 tracking-tight">
             Preguntas Frecuentes
-          </h2>
+          </h2> */}
+          <h1 className="font-bold text-5xl mt-5">
+              <span className="text-blue-700 tracking-wide">Preguntas </span>
+              <span>Frecuentes</span>
+            </h1>
         </div>
         <div class="grid lg:grid-cols-2 divide-y gap-4 divide-neutral-200 w-full mx-auto mt-8">
           <div class="py-5 bg-white rounded-xl px-4">

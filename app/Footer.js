@@ -1,9 +1,12 @@
+"use client"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BsFacebook, BsInstagram, BsTiktok } from 'react-icons/bs';
 
 const Footer = () => {
+  const pagina = usePathname()
   return (
-    <div className="flex items-end w-full bg-gray-200">
+    <div className={`${pagina == "/Admin" && "hidden" || "flex"} items-end w-full bg-gray-200`}>
       <footer className="w-full text-gray-700 bg-gray-200 body-font">
         <div className="container grid md:grid-cols-3 gap-2 px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
           <div className="w-full px-4">
