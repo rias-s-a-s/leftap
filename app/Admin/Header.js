@@ -66,9 +66,9 @@ const HeaderConfig = ({ user }) => {
         {/* <Image src="/ConticoldLogo.png" width={60} height={40} alt="Logo" /> */}
       </Link>
       <div className="text-xl lg:text-3xl text-center px-2">
-        <span>
-          <p className="text-white"> Leftap </p>
-        </span>
+        <Link href={"/"}>
+          <p className="text-white hover:text-blue-900"> Leftap </p>
+        </Link>
       </div>
       <div>
         <div className="flex space-x-4 items-center">
@@ -115,7 +115,7 @@ const HeaderConfig = ({ user }) => {
                       )}
 
                       <h1 className="text-[1.6rem] capitalize font-bold">
-                        {userDB.displayName}
+                        {userDB?.displayName}
                       </h1>
                     </div>
                     <hr className="w-full border-gray-300 border-[1px] my-2"></hr>
