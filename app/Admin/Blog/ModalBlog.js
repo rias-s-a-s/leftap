@@ -1,11 +1,5 @@
 "use client";
-import {
-  Button,
-  Divider,
-  Title,
-  SearchSelectItem,
-  SearchSelect,
-} from "@tremor/react";
+import { Button, Divider, Title } from "@tremor/react";
 import React, { useRef, useState } from "react";
 
 import {
