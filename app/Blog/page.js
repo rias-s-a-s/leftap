@@ -1,136 +1,95 @@
-import React from "react";
+"use client";
+import { collection, onSnapshot } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { db } from "../firebase";
+import Link from "next/link";
 
 const Blog = () => {
-  const publicaciones = {
-    imagen: "https://leftap.org/wp-content/uploads/2023/02/MOTIVACION-TIEMPO-1080x675.png",
-    texto: <>
-      <p className="text-4xl font-bold p-2">Con el desarrollo personal puedes superar los obstáculos que no te permiten crecer en tu vida. Te ayuda a alcanzar tus metas y descubrir tu verdadero potencial, aumentar tu autoestima, confianza en uno mismo y reduce tus niveles de ansiedad y estrés.</p>
-      <p className="text-gray-700 p-4"><b>El desarrollo personal es esencial para alcanzar una vida plena y satisfactoria.</b> Te permite descubrir tu verdadero potencial y convertirte en la mejor versión de ti mismo, lo que te permite vivir una vida más significativa y feliz.</p>
-    </>,
-    por: "leftap",
-    fecha: "Mar 10, 2023"
-  }
+  const [Blog, setBlog] = useState([]);
+
+  console.log("Blog", Blog);
+  useEffect(() => {
+    onSnapshot(
+      collection(db, `Blog`),
+      // orderBy("email", "asc"),
+      (snapshot) => {
+        setBlog(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }))
+        );
+      }
+    );
+  }, []);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-      {/*First card*/}
-      <div className="md:p-8 p-2 bg-white" >
-        {/*Banner image*/}
+    <div>
+      <div className="relative isolate overflow-hidden bg-gray-900 py-24 ">
         <img
-          className="rounded-lg w-full"
-          src="https://leftap.org/wp-content/uploads/2023/02/MOTIVACION-TIEMPO-1080x675.png
-    "
-          alt="image 1"
+          src="/BannerBlog.webp"
+          alt="banner"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
         />
-        {/*Title*/}
-        <h1 className="font-semibold text-gray-900 leading-none text-xl mt-1 capitalize">
-          Desarrollo personal ¿Qué es y para que sirve?
-        </h1>
-        {/*Description*/}
-        <div className="max-w-full">
-          <p className="text-base font-medium tracking-wide text-gray-600 mt-1">
-            Con el desarrollo personal puedes superar los obstáculos que no te permiten crecer en tu vida. Te ayuda a alcanzar tus metas y descubrir tu verdadero potencial, aumentar tu autoestima, confianza en uno mismo y reduce tus niveles de ansiedad y estrés. El desarrollo...
-          </p>
+        <div
+          className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl  bg-black/80"
+          aria-hidden="true"
+        >
+          <div className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-blue-900 to-[#1479dd] opacity-20" />
         </div>
-        <div className="flex items-center space-x-2 mt-5">
-          {/*Author's profile photo*/}
-          <img
-            className="w-10 h-10 object-cover object-top rounded-full"
-            src="/marina.jpg"
-            alt="random user"
-          />
-          <div>
-            {/*Author name*/}
-            <p className="text-gray-900 font-semibold">Leftap</p>
-            <p className="text-gray-500 font-semibold text-sm">
-              Mar 10, 2023
-            </p>
+        <div
+          className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu  bg-black/80"
+          aria-hidden="true"
+        >
+          <div className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-blue-900 to-[#1479dd] opacity-20" />
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0 shadow-lg backdrop-blur-sm">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Un espacio para <br /> Curiosos y Soñadores{" "}
+            </h2>
+            {/* <p className="mt-6 text-lg leading-8 text-gray-300">
+              Bienvenido a nuestra biblioteca virtual de blogs. Aquí, cada
+              entrada es un mundo en sí mismo, esperando ser descubierto por ti.
+            </p> */}
           </div>
         </div>
       </div>
-      {/*End of first card*/}
-      {/*Second Tag*/}
-      <div className="p-8 bg-white">
-        {/*Banner image*/}
-        <img
-          className="rounded-lg w-full"
-          src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80
-    "
-          alt="image 3"
-        />
-        {/*Tag*/}
-        <p className="text-indigo-500 font-semibold text-base mt-2">
-          Startup stories
-        </p>
-        {/*Title*/}
-        <h1 className="font-semibold text-gray-900 leading-none text-xl mt-1 capitalize truncate">
-          The rise of facebook
-        </h1>
-        {/*Description*/}
-        <div className="max-w-full">
-          <p className="text-base font-medium tracking-wide text-gray-600 mt-1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil,
-            dignissimos repudiandae. Consequuntur minus ipsam repudiandae soluta
-            qui, recusandae obcaecati molestias commodi magnam nisi illo illum
-            quaerat aut maiores! Esse, aperiam!
-          </p>
-        </div>
-        <div className="flex items-center space-x-2 mt-20">
-          {/*Author's profile photo*/}
-          <img
-            className="w-10 h-10 object-cover object-center rounded-full"
-            src="https://randomuser.me/api/portraits/men/54.jpg"
-            alt="random user"
-          />
-          <div>
-            {/*Author name*/}
-            <p className="text-gray-900 font-semibold">Lugano Shabani</p>
-            <p className="text-gray-500 font-semibold text-sm">
-              Feb 24,2021 · 6 min read
-            </p>
-          </div>
-        </div>
+
+      {/* blog */}
+
+      <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3  ">
+        {Blog?.map((blog) => (
+          <Link
+            href={`/Blog/${blog.id}`}
+            key={blog.id}
+            className="max-w-lg mx-auto cursor-pointer hover:opacity-80 "
+          >
+            <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+              <img
+                className="rounded-t-lg"
+                src={blog?.Imagenes[0] || ""}
+                alt="imageBlog"
+              />
+
+              <div className="p-5">
+                <div>
+                  <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
+                    {blog?.Titulo}
+                  </h5>
+                </div>
+                <div
+                  className="quill-content line-clamp-4 text-justify"
+                  dangerouslySetInnerHTML={{ __html: blog?.Blog }}
+                />
+
+                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
+                  Leer más{" "}
+                </button>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
-      {/*End of first card*/}
-      {/*Third  card*/}
-      <div className="p-8 bg-white">
-        {/*Banner image*/}
-        <img
-          className="h-80 rounded-lg w-full object-cover object-center"
-          src="https://images.unsplash.com/photo-1580867532901-7e3707f178ce?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=732&q=80"
-          alt="image 5"
-        />
-        {/*Tag*/}
-        <p className="text-indigo-500 font-semibold text-base mt-2">Culture</p>
-        {/*Title*/}
-        <h1 className="font-semibold text-gray-900 leading-none text-xl mt-1 capitalize truncate">
-          the life of masaai people from tanzania
-        </h1>
-        {/*Description*/}
-        <div className="max-w-full">
-          <p className="text-base font-medium tracking-wide text-gray-600 mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-            officiis aspernatur, modi nobis et neque quod asperiores laboriosam
-            ab. Magni fugit necessitatibus ducimus placeat assumenda perferendis
-            laborum quae aperiam minus.
-          </p>
-        </div>
-        <div className="flex items-center space-x-2 mt-20">
-          {/*Author's profile photo*/}
-          <img
-            className="w-10 h-10 object-cover object-center rounded-full"
-            src="https://randomuser.me/api/portraits/men/54.jpg"
-            alt="random user"
-          />
-          <div>
-            {/*Author name*/}
-            <p className="text-gray-900 font-semibold">Lugano Shabani</p>
-            <p className="text-gray-500 font-semibold text-sm">
-              Feb 24,2021 · 6 min read
-            </p>
-          </div>
-        </div>
-      </div>
-      {/*End of first card*/}
     </div>
   );
 };
