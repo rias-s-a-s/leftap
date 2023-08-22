@@ -1,184 +1,157 @@
+"use client"
+import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const BlogComponent = () => {
+  const [reel, setReel] = useState(false)
   return (
     <main className="flex-grow">
-      <div className="relative px-8">
-        <div className="max-w-screen-xl mx-auto my-12 md:mt-18 lg:mt-20">
-          <h1 className="font-display text-secondary-500 text-4xl font-black tracking-wide">
-            Blog Posts
-          </h1>
+
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 bg-[#182d57] rounded-md">
+        <div>
+          <Card className="mt-6 w-full  h-[92%] mx-auto hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
+            <CardHeader color="blue-gray" className="h-56">
+              <img src="/CardsImages/emprendedor.webp" className="lg:h-[225px] h-[214px] md:h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                ¡Emprendedores y pequeñas empresas!
+              </Typography>
+              <Typography>
+                Maximice su potencial con nuestras capacidades especialmente diseñadas para ustedes.
+              </Typography>
+            </CardBody>
+          </Card>
+        </div>
+        <div>
+          <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
+            <CardHeader color="blue-gray" className="h-56">
+              <img src="/CardsImages/joventud.webp" className="lg:h-[225px] h-[214px] md:h-[224px] w-full" alt="img-blur-shadow" layout="fill" />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                ¡Atención jóvenes!
+              </Typography>
+              <Typography>
+                Aprende a manejar tu dinero de manera inteligente con nuestras charlas-taller de educación financiera
+              </Typography>
+            </CardBody>
+          </Card>
+        </div>
+        <div>
+          <Link href={"/Capacitaciones"}>
+            <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
+              <CardHeader color="blue-gray" className="h-56">
+                <img src="/CardsImages/habilidad.webp" className="lg:h-[225px] h-[217px] md:h-[223px] w-full" alt="img-blur-shadow" layout="fill" />
+              </CardHeader>
+              <CardBody>
+                <Typography variant="h5" color="blue-gray" className="mb-2">
+                  ¡Mejora tus habilidades!
+                </Typography>
+                <Typography>
+                  Aumenta tu valor en el mercado laboral con nuestras capacitaciones
+                </Typography>
+              </CardBody>
+            </Card>
+          </Link>
+        </div>
+        <div>
+          <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
+            <CardHeader color="blue-gray" className="h-56">
+              <img src="/CardsImages/mejoraVida.webp" className="lg:h-[225px] h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                ¡Transforma tu vida!
+              </Typography>
+              <Typography>
+                Con nuestras capacitaciones de desarrollo personal
+              </Typography>
+            </CardBody>
+          </Card>
+        </div>
+        <div>
+          <Card className="mt-6 w-full mx-auto h-[92%] cursor-pointer hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300" onClick={() => {
+            setReel(!reel)
+          }}>
+            <CardHeader color="blue-gray" className="h-56">
+              <Image
+                src={"/CardsImages/Charlas.webp"}
+                width={600}
+                height={600}
+                className="lg:h-[225px] h-[214px] md:h-[225px] w-full"
+              />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                Charlas Institucionales
+              </Typography>
+              <Typography>
+                Divulgar la educación financiera entre los jóvenes en el sistema educativo es crucial para empoderarlos con habilidades financieras y prepararlos para un futuro económico sólido.
+              </Typography>
+            </CardBody>
+          </Card>
+        </div>
+        <div>
+          <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300" >
+            <CardHeader color="blue-gray" className="h-56">
+              <img src="/CardsImages/VirtualPresencial.webp" className="md:h-auto h-[214px] w-full" alt="img-blur-shadow" layout="fill" />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                conferencias (Virtual/Presencial)
+              </Typography>
+              <Typography>
+                ¡Descubre el poder de la educación financiera, muestra a tus estudiantes una propuesta diferente y actualizada! Comunícate con nosotros para brindarles charlas y conferencias sobre educación financiera en tu institución educativa y brinda a tus estudiantes las herramientas necesarias para un futuro financiero exitoso.
+              </Typography>
+            </CardBody>
+          </Card>
         </div>
       </div>
-      <div className="relative px-8 mb-8">
-        <div className="flex flex-col sm:flex-row max-w-screen-xl mx-auto pt-8 group">
-          <div className="sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg relative">
-            <Link className="cursor-pointer" href="/Blog/12">
-              <div className="h-64 sm:h-96 relative" style={{ width: "100%" }}>
+      {reel && <>
+        <div className='w-full fixed top-0 z-50 h-screen bg-black/20 text-center'>
+          <div className='text-red-700 w-full mx-auto font-bold font-[oswald] text-6xl drop-shadow-lg italic tracking-[7px] mt-14 fixed justify-center z-50 flex'>
+            NUESTRAS CHARLAS
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 lg:ml-6 cursor-pointer" onClick={() => {
+              setReel(!reel)
+            }}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <div className='bg-white w-3/4 z-50 mx-auto mt-[12rem] lg:mt-32 h-[40%] md:h-[47%] lg:h-[74%] text-center p-2 rounded-md '>
+            <Carousel showArrows={true} autoPlay showThumbs={false} showStatus={false}>
+              <div>
                 <img
-                  alt="Virtual Tour"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  srcSet="https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=384&format=auto 384w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=640&format=auto 640w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=750&format=auto 750w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=828&format=auto 828w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1080&format=auto 1080w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1200&format=auto 1200w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1920&format=auto 1920w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=2048&format=auto 2048w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=3840&format=auto 3840w"
-                  src="https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=3840&format=auto"
-                  decoding="async"
-                  data-nimg="fill"
-                  className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
-                  style={{
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    left: 0,
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    color: "transparent",
-                  }}
+                  src="/Presentaciones/Presentacion1.webp"
+                  alt="image 1"
+                  className="md:h-auto h-[214px]"
                 />
+                <p className="legend">Nuestras charlas interactivas y conferencias inspiradoras están diseñadas específicamente para jóvenes, abordando temas clave como el manejo del dinero, sus objetivos de vida, orientación vocacional, la planificación financiera, el ahorro, la inversión y la toma de decisiones inteligentes. Con ejemplos prácticos y consejos prácticos, nuestros expertos capacitarán a tus estudiantes para tomar el control de su futuro económico.</p>
               </div>
-            </Link>
-          </div>
-          <div className="sm:w-1/2 lg:w-1/3 bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 relative">
-            <Link className="cursor-pointer" href="/Blog/12">
-              <div className="font-display uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content">
-                Travel Guide
+              <div>
+                <img
+                  src="/Presentaciones/Presentacion2.webp"
+                  alt="image 2"
+                  className="md:h-auto h-[214px]"
+                />
+                <p className="legend">No dejes que tus estudiantes se enfrenten a los desafíos financieros sin la preparación adecuada, ayudalos guíalos con la información que necesitan saber hoy para aplicarla en toda su vida. Nuestro equipo de profesionales apasionados y con experiencia está listo para equipar a tus jóvenes con habilidades financieras fundamentales que los acompañarán a lo largo de su desarrollo.</p>
               </div>
-              <div className="border-b-2 border-primary-500 w-8" />
-              <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
-                Mar. 31, 2021
+              <div>
+                <img
+                  src="/Presentaciones/Presentacion3.webp"
+                  alt="image 3"
+                  className="md:h-auto h-[214px]"
+                />
+                <p className="legend">¡Reserva una charla o conferencia hoy mismo, conviértete en un pionero en aplicar esta información en la educación formal y ayuda a tus estudiantes a construir una base sólida para lograr sus metas financieras! Contáctanos ahora para más información y disponibilidad.</p>
               </div>
-              <h2 className="font-display text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
-                Virtual Tours - Ways to Travel From Home
-              </h2>
-              <p className="text-sm mt-3 leading-loose text-gray-600 font-medium line-clamp-4">
-                Virtual tours can open up amazing and awe-inspiring locations
-                around the world that may otherwise be inaccessible to you. You
-                can experience the majesty of the Sistine Chapel, the wonder of
-                the Great ...
-              </p>
-            </Link>
+            </Carousel>
           </div>
         </div>
-      </div>
-      <div className="relative px-8 mb-12">
-        <div className="max-w-screen-xl mx-auto">
-          <div className="sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <Link className="cursor-pointer" href="/Blog/12">
-              <div className="flex-col group mb-8 md:mb-0">
-                <div className="relative h-64">
-                  <img
-                    alt="Virtual Tour"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    srcSet="https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=256&format=auto 256w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=384&format=auto 384w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=640&format=auto 640w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=750&format=auto 750w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=828&format=auto 828w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1080&format=auto 1080w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1200&format=auto 1200w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=1920&format=auto 1920w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=2048&format=auto 2048w, https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=3840&format=auto 3840w"
-                    src="https://cdn.aglty.io/blog-starter-2021-template/posts/virtual-tour_20210331171226_0.jpg?q=60&w=3840&format=auto"
-                    decoding="async"
-                    data-nimg="fill"
-                    className="object-cover object-center rounded-t-lg"
-                    loading="lazy"
-                    style={{
-                      position: "absolute",
-                      height: "100%",
-                      width: "100%",
-                      left: 0,
-                      top: 0,
-                      right: 0,
-                      bottom: 0,
-                      color: "transparent",
-                    }}
-                  />
-                </div>
-                <div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
-                  <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
-                    Travel Guide
-                  </div>
-                  <div className="border-b-2 border-primary-500 w-8" />
-                  <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
-                    Mar. 31, 2021
-                  </div>
-                  <h2 className="text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
-                    Virtual Tours - Ways to Travel From Home
-                  </h2>
-                </div>
-              </div>
-            </Link>
-            <a href="/blog/am-eh-zing-places-to-visit-in-canada">
-              <div className="flex-col group mb-8 md:mb-0">
-                <div className="relative h-64">
-                  <img
-                    alt="Visit the beautiful Alps in Switzerland"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    srcSet="https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=256&format=auto 256w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=384&format=auto 384w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=640&format=auto 640w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=750&format=auto 750w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=828&format=auto 828w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=1080&format=auto 1080w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=1200&format=auto 1200w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=1920&format=auto 1920w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=2048&format=auto 2048w, https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=3840&format=auto 3840w"
-                    src="https://cdn.aglty.io/blog-starter-2021-template/posts/canadian.jpg?q=60&w=3840&format=auto"
-                    decoding="async"
-                    data-nimg="fill"
-                    className="object-cover object-center rounded-t-lg"
-                    loading="lazy"
-                    style={{
-                      position: "absolute",
-                      height: "100%",
-                      width: "100%",
-                      left: 0,
-                      top: 0,
-                      right: 0,
-                      bottom: 0,
-                      color: "transparent",
-                    }}
-                  />
-                </div>
-                <div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
-                  <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
-                    Travel Guide
-                  </div>
-                  <div className="border-b-2 border-primary-500 w-8" />
-                  <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
-                    Mar. 23, 2021
-                  </div>
-                  <h2 className="text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
-                    Am-EH-zing Places to Visit in Canada!
-                  </h2>
-                </div>
-              </div>
-            </a>
-            <Link className="cursor-pointer" href="/Blog/12">
-              <div className="flex-col group mb-8 md:mb-0">
-                <div className="relative h-64">
-                  <img
-                    alt="Travel Photography 101"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    srcSet="https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=256&format=auto 256w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=384&format=auto 384w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=640&format=auto 640w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=750&format=auto 750w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=828&format=auto 828w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=1080&format=auto 1080w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=1200&format=auto 1200w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=1920&format=auto 1920w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=2048&format=auto 2048w, https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=3840&format=auto 3840w"
-                    src="https://cdn.aglty.io/blog-starter-2021-template/posts/travel-photography_20210331143648_0.jpg?q=60&w=3840&format=auto"
-                    decoding="async"
-                    data-nimg="fill"
-                    className="object-cover object-center rounded-t-lg"
-                    loading="lazy"
-                    style={{
-                      position: "absolute",
-                      height: "100%",
-                      width: "100%",
-                      left: 0,
-                      top: 0,
-                      right: 0,
-                      bottom: 0,
-                      color: "transparent",
-                    }}
-                  />
-                </div>
-                <div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
-                  <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
-                    Travel Tips
-                  </div>
-                  <div className="border-b-2 border-primary-500 w-8" />
-                  <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
-                    Mar. 23, 2021
-                  </div>
-                  <h2 className="text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
-                    Travel Photography Tips: 101
-                  </h2>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
+      </>}
     </main>
   );
 };
