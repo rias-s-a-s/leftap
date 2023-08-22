@@ -20,13 +20,10 @@ function AddPost() {
                     </div>
                 </div>
                 <div className='container mx-auto bg-blue-800 py-3 px-8 text-center rounded-md text-2xl text-white uppercase'>Post</div>
-                <div className='App py-2'>
+                <div className='py-2'>
                     <CKEditor
                         className="border-2 border-cyan-300"
                         editor={ClassicEditor}
-                        onReady={editor => {
-                            alert("Todo good")
-                        }}
                     />
 
                 </div>
