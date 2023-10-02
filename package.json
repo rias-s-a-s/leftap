@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "@material-tailwind/react": "^2.1.0",
+    "@material-tailwind/react": "^2.1.2",
     "@tremor/react": "^3.6.1",
     "autoprefixer": "10.4.14",
     "encoding": "0.1.13",

@@ -5,11 +5,12 @@ import ItemMenu from "./ItemMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+
 const MenuPrincipal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pagina = usePathname();
   useEffect(() => {
-    // console.log(pagina)
+    //console.log(pagina)
     setIsOpen(false);
   }, [pagina]);
   return (
