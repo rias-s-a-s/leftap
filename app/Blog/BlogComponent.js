@@ -1,33 +1,58 @@
 "use client"
 import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import { collection, onSnapshot } from "firebase/firestore";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { db } from "../firebase";
 
 const BlogComponent = () => {
   const [reel, setReel] = useState(false)
+
+  const [OperacionesServicios, setOperacionesServicios] = useState([]);
+
+  useEffect(() => {
+    onSnapshot(
+      collection(db, `OperacionesServicios`),
+      // orderBy("email", "asc"),
+      (snapshot) =>
+        setOperacionesServicios(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }))
+        )
+    );
+  }, []);
+  console.log(OperacionesServicios);
   return (
     <main className="flex-grow">
 
+      
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 bg-[#182d57] rounded-md">
-        <div>
-          <Card className="mt-6 w-full  h-[92%] mx-auto hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
-            <CardHeader color="blue-gray" className="h-56">
-              <img src="/CardsImages/emprendedor.webp" className="lg:h-[225px] h-[214px] md:h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                ¡Emprendedores y pequeñas empresas!
-              </Typography>
-              <Typography>
-                Maximice su potencial con nuestras capacidades especialmente diseñadas para ustedes.
-              </Typography>
-            </CardBody>
-          </Card>
-        </div>
-        <div>
+        {OperacionesServicios?.map((item) => 
+        <Card className="mt-6 w-full  h-[92%] mx-auto hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
+        <CardHeader color="blue-gray" className="h-56">
+          <img src={item.Imagenes} className="lg:h-[225px] h-[214px] md:h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
+        </CardHeader>
+        <CardBody>
+          <Typography variant="h5" color="blue-gray" className="mb-2">
+            {item.Titulo}
+          </Typography>
+          <Typography>
+            <div
+                    className="quill-content line-clamp-6 text-justify"
+                    dangerouslySetInnerHTML={{ __html: `${item.Descripcion}`}}
+                  />
+          </Typography>
+        </CardBody>
+      </Card>
+        
+        )}
+        
+        {/* <div>
           <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
             <CardHeader color="blue-gray" className="h-56">
               <img src="/CardsImages/joventud.webp" className="lg:h-[225px] h-[214px] md:h-[224px] w-full" alt="img-blur-shadow" layout="fill" />
@@ -110,7 +135,7 @@ const BlogComponent = () => {
               </Typography>
             </CardBody>
           </Card>
-        </div>
+        </div> */}
       </div>
       {reel && <>
         <div className='w-full fixed top-0 z-50 h-screen bg-black/20 text-center'>

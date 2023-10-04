@@ -62,16 +62,16 @@ const Blog = () => {
           <Link
             href={`/Blog/${blog.id}`}
             key={blog.id}
-            className="max-w-lg mx-auto cursor-pointer hover:opacity-80 "
+            className="flex flex-col h-full max-w-lg mx-auto cursor-pointer hover:opacity-80"
           >
-            <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+            <div className="flex flex-col bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 h-full">
               <img
                 className="rounded-t-lg"
                 src={blog?.Imagenes[0] || ""}
                 alt="imageBlog"
               />
 
-              <div className="p-5">
+              <div className="p-12">
                 <div>
                   <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
                     {blog?.Titulo}
@@ -82,7 +82,7 @@ const Blog = () => {
                   dangerouslySetInnerHTML={{ __html: blog?.Blog }}
                 />
 
-                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
+                <button className=" mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
                   Leer más{" "}
                 </button>
               </div>
