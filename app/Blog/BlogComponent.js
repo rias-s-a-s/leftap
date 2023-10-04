@@ -1,5 +1,10 @@
-"use client"
-import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+"use client";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
 import { collection, onSnapshot } from "firebase/firestore";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +14,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { db } from "../firebase";
 
 const BlogComponent = () => {
-  const [reel, setReel] = useState(false)
+  const [reel, setReel] = useState(false);
 
   const [OperacionesServicios, setOperacionesServicios] = useState([]);
 
@@ -29,29 +34,34 @@ const BlogComponent = () => {
   console.log(OperacionesServicios);
   return (
     <main className="flex-grow">
-
-      
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 bg-[#182d57] rounded-md">
-        {OperacionesServicios?.map((item) => 
-        <Card className="mt-6 w-full  h-[92%] mx-auto hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
-        <CardHeader color="blue-gray" className="h-56">
-          <img src={item.Imagenes} className="lg:h-[225px] h-[214px] md:h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
-        </CardHeader>
-        <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
-            {item.Titulo}
-          </Typography>
-          <Typography>
-            <div
-                    className="quill-content line-clamp-6 text-justify"
-                    dangerouslySetInnerHTML={{ __html: `${item.Descripcion}`}}
-                  />
-          </Typography>
-        </CardBody>
-      </Card>
-        
-        )}
-        
+        {OperacionesServicios?.map((item) => (
+          <Card
+            key={item.key}
+            className="mt-6 w-full  h-[92%] mx-auto hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300"
+          >
+            <CardHeader color="blue-gray" className="h-56">
+              <img
+                src={item.Imagenes}
+                className="lg:h-[225px] h-[214px] md:h-[220px] w-full"
+                alt="img-blur-shadow"
+                layout="fill"
+              />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                {item.Titulo}
+              </Typography>
+              <Typography>
+                <div
+                  className="quill-content line-clamp-6 text-justify"
+                  dangerouslySetInnerHTML={{ __html: `${item.Descripcion}` }}
+                />
+              </Typography>
+            </CardBody>
+          </Card>
+        ))}
+
         {/* <div>
           <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
             <CardHeader color="blue-gray" className="h-56">
@@ -137,46 +147,88 @@ const BlogComponent = () => {
           </Card>
         </div> */}
       </div>
-      {reel && <>
-        <div className='w-full fixed top-0 z-50 h-screen bg-black/20 text-center'>
-          <div className='text-red-700 w-full mx-auto font-bold font-[oswald] text-6xl drop-shadow-lg italic tracking-[7px] mt-14 fixed justify-center z-50 flex'>
-            NUESTRAS CHARLAS
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 lg:ml-6 cursor-pointer" onClick={() => {
-              setReel(!reel)
-            }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+      {reel && (
+        <>
+          <div className="w-full fixed top-0 z-50 h-screen bg-black/20 text-center">
+            <div className="text-red-700 w-full mx-auto font-bold font-[oswald] text-6xl drop-shadow-lg italic tracking-[7px] mt-14 fixed justify-center z-50 flex">
+              NUESTRAS CHARLAS
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="w-8 h-8 lg:ml-6 cursor-pointer"
+                onClick={() => {
+                  setReel(!reel);
+                }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
+            <div className="bg-white w-3/4 z-50 mx-auto mt-[12rem] lg:mt-32 h-[40%] md:h-[47%] lg:h-[74%] text-center p-2 rounded-md ">
+              <Carousel
+                showArrows={true}
+                autoPlay
+                showThumbs={false}
+                showStatus={false}
+              >
+                <div>
+                  <img
+                    src="/Presentaciones/Presentacion1.webp"
+                    alt="image 1"
+                    className="md:h-auto h-[214px]"
+                  />
+                  <p className="legend">
+                    Nuestras charlas interactivas y conferencias inspiradoras
+                    están diseñadas específicamente para jóvenes, abordando
+                    temas clave como el manejo del dinero, sus objetivos de
+                    vida, orientación vocacional, la planificación financiera,
+                    el ahorro, la inversión y la toma de decisiones
+                    inteligentes. Con ejemplos prácticos y consejos prácticos,
+                    nuestros expertos capacitarán a tus estudiantes para tomar
+                    el control de su futuro económico.
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="/Presentaciones/Presentacion2.webp"
+                    alt="image 2"
+                    className="md:h-auto h-[214px]"
+                  />
+                  <p className="legend">
+                    No dejes que tus estudiantes se enfrenten a los desafíos
+                    financieros sin la preparación adecuada, ayudalos guíalos
+                    con la información que necesitan saber hoy para aplicarla en
+                    toda su vida. Nuestro equipo de profesionales apasionados y
+                    con experiencia está listo para equipar a tus jóvenes con
+                    habilidades financieras fundamentales que los acompañarán a
+                    lo largo de su desarrollo.
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="/Presentaciones/Presentacion3.webp"
+                    alt="image 3"
+                    className="md:h-auto h-[214px]"
+                  />
+                  <p className="legend">
+                    ¡Reserva una charla o conferencia hoy mismo, conviértete en
+                    un pionero en aplicar esta información en la educación
+                    formal y ayuda a tus estudiantes a construir una base sólida
+                    para lograr sus metas financieras! Contáctanos ahora para
+                    más información y disponibilidad.
+                  </p>
+                </div>
+              </Carousel>
+            </div>
           </div>
-          <div className='bg-white w-3/4 z-50 mx-auto mt-[12rem] lg:mt-32 h-[40%] md:h-[47%] lg:h-[74%] text-center p-2 rounded-md '>
-            <Carousel showArrows={true} autoPlay showThumbs={false} showStatus={false}>
-              <div>
-                <img
-                  src="/Presentaciones/Presentacion1.webp"
-                  alt="image 1"
-                  className="md:h-auto h-[214px]"
-                />
-                <p className="legend">Nuestras charlas interactivas y conferencias inspiradoras están diseñadas específicamente para jóvenes, abordando temas clave como el manejo del dinero, sus objetivos de vida, orientación vocacional, la planificación financiera, el ahorro, la inversión y la toma de decisiones inteligentes. Con ejemplos prácticos y consejos prácticos, nuestros expertos capacitarán a tus estudiantes para tomar el control de su futuro económico.</p>
-              </div>
-              <div>
-                <img
-                  src="/Presentaciones/Presentacion2.webp"
-                  alt="image 2"
-                  className="md:h-auto h-[214px]"
-                />
-                <p className="legend">No dejes que tus estudiantes se enfrenten a los desafíos financieros sin la preparación adecuada, ayudalos guíalos con la información que necesitan saber hoy para aplicarla en toda su vida. Nuestro equipo de profesionales apasionados y con experiencia está listo para equipar a tus jóvenes con habilidades financieras fundamentales que los acompañarán a lo largo de su desarrollo.</p>
-              </div>
-              <div>
-                <img
-                  src="/Presentaciones/Presentacion3.webp"
-                  alt="image 3"
-                  className="md:h-auto h-[214px]"
-                />
-                <p className="legend">¡Reserva una charla o conferencia hoy mismo, conviértete en un pionero en aplicar esta información en la educación formal y ayuda a tus estudiantes a construir una base sólida para lograr sus metas financieras! Contáctanos ahora para más información y disponibilidad.</p>
-              </div>
-            </Carousel>
-          </div>
-        </div>
-      </>}
+        </>
+      )}
     </main>
   );
 };

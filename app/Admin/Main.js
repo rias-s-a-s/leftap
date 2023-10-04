@@ -31,7 +31,7 @@ const Main = ({ children }) => {
                   </div>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     href="/Admin/Blog"
                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500  pr-6"
@@ -43,7 +43,7 @@ const Main = ({ children }) => {
                       Blog
                     </span>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/Admin/OperacionesServicios"

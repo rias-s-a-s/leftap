@@ -5,7 +5,6 @@ import ItemMenu from "./ItemMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-
 const MenuPrincipal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pagina = usePathname();
@@ -70,9 +69,16 @@ const MenuPrincipal = () => {
           <ItemMenu ruta="/Nosotros" setIsOpen={setIsOpen}>
             Nosotros
           </ItemMenu>
-          <ItemMenu ruta="/Blog" setIsOpen={setIsOpen}>
-            Blog
-          </ItemMenu>
+          <a
+            href="https://leftap.blogspot.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="cursor-pointer mx-3 my-6 md:mx-1 lg:mx-3">
+              <div className="uppercase md:text-base lg:text-xl"> Blog</div>
+            </div>
+          </a>
+
           <ItemMenu ruta="/Desarrollo" setIsOpen={setIsOpen}>
             Desarrollo Personal
           </ItemMenu>
