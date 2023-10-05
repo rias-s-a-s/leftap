@@ -62,17 +62,23 @@ const BlogComponent = () => {
           </Card>
         ))}
 
-        {/* <div>
+        <div>
           <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="/CardsImages/joventud.webp" className="lg:h-[225px] h-[214px] md:h-[224px] w-full" alt="img-blur-shadow" layout="fill" />
+              <img
+                src="/CardsImages/joventud.webp"
+                className="lg:h-[225px] h-[214px] md:h-[224px] w-full"
+                alt="img-blur-shadow"
+                layout="fill"
+              />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
                 ¡Atención jóvenes!
               </Typography>
               <Typography>
-                Aprende a manejar tu dinero de manera inteligente con nuestras charlas-taller de educación financiera
+                Aprende a manejar tu dinero de manera inteligente con nuestras
+                charlas-taller de educación financiera
               </Typography>
             </CardBody>
           </Card>
@@ -81,14 +87,20 @@ const BlogComponent = () => {
           <Link href={"/Capacitaciones"}>
             <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
               <CardHeader color="blue-gray" className="h-56">
-                <img src="/CardsImages/habilidad.webp" className="lg:h-[225px] h-[217px] md:h-[223px] w-full" alt="img-blur-shadow" layout="fill" />
+                <img
+                  src="/CardsImages/habilidad.webp"
+                  className="lg:h-[225px] h-[217px] md:h-[223px] w-full"
+                  alt="img-blur-shadow"
+                  layout="fill"
+                />
               </CardHeader>
               <CardBody>
                 <Typography variant="h5" color="blue-gray" className="mb-2">
                   ¡Mejora tus habilidades!
                 </Typography>
                 <Typography>
-                  Aumenta tu valor en el mercado laboral con nuestras capacitaciones
+                  Aumenta tu valor en el mercado laboral con nuestras
+                  capacitaciones
                 </Typography>
               </CardBody>
             </Card>
@@ -97,7 +109,12 @@ const BlogComponent = () => {
         <div>
           <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="/CardsImages/mejoraVida.webp" className="lg:h-[225px] h-[220px] w-full" alt="img-blur-shadow" layout="fill" />
+              <img
+                src="/CardsImages/mejoraVida.webp"
+                className="lg:h-[225px] h-[220px] w-full"
+                alt="img-blur-shadow"
+                layout="fill"
+              />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -110,9 +127,12 @@ const BlogComponent = () => {
           </Card>
         </div>
         <div>
-          <Card className="mt-6 w-full mx-auto h-[92%] cursor-pointer hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300" onClick={() => {
-            setReel(!reel)
-          }}>
+          <Card
+            className="mt-6 w-full mx-auto h-[92%] cursor-pointer hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300"
+            onClick={() => {
+              setReel(!reel);
+            }}
+          >
             <CardHeader color="blue-gray" className="h-56">
               <Image
                 src={"/CardsImages/Charlas.webp"}
@@ -126,26 +146,38 @@ const BlogComponent = () => {
                 Charlas Institucionales
               </Typography>
               <Typography>
-                Divulgar la educación financiera entre los jóvenes en el sistema educativo es crucial para empoderarlos con habilidades financieras y prepararlos para un futuro económico sólido.
+                Divulgar la educación financiera entre los jóvenes en el sistema
+                educativo es crucial para empoderarlos con habilidades
+                financieras y prepararlos para un futuro económico sólido.
               </Typography>
             </CardBody>
           </Card>
         </div>
         <div>
-          <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300" >
+          <Card className="mt-6 w-full mx-auto h-[92%] hover:-translate-y-2 hover:shadow-lg hover:shadow-green-300">
             <CardHeader color="blue-gray" className="h-56">
-              <img src="/CardsImages/VirtualPresencial.webp" className="md:h-auto h-[214px] w-full" alt="img-blur-shadow" layout="fill" />
+              <img
+                src="/CardsImages/VirtualPresencial.webp"
+                className="md:h-auto h-[214px] w-full"
+                alt="img-blur-shadow"
+                layout="fill"
+              />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
                 conferencias (Virtual/Presencial)
               </Typography>
               <Typography>
-                ¡Descubre el poder de la educación financiera, muestra a tus estudiantes una propuesta diferente y actualizada! Comunícate con nosotros para brindarles charlas y conferencias sobre educación financiera en tu institución educativa y brinda a tus estudiantes las herramientas necesarias para un futuro financiero exitoso.
+                ¡Descubre el poder de la educación financiera, muestra a tus
+                estudiantes una propuesta diferente y actualizada! Comunícate
+                con nosotros para brindarles charlas y conferencias sobre
+                educación financiera en tu institución educativa y brinda a tus
+                estudiantes las herramientas necesarias para un futuro
+                financiero exitoso.
               </Typography>
             </CardBody>
           </Card>
-        </div> */}
+        </div>
       </div>
       {reel && (
         <>
