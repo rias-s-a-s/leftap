@@ -70,7 +70,7 @@ const MenuPrincipal = () => {
             Nosotros
           </ItemMenu>
           <a
-            href="https://leftap.blogspot.com"
+            href="https://leftapdigital.blogspot.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
